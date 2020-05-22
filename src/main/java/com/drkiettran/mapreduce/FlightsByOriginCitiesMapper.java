@@ -27,8 +27,8 @@ public class FlightsByOriginCitiesMapper extends Mapper<LongWritable, Text, Text
         if (key.get() > 0) {
             String[] lines = new CSVParser().parseLine(value.toString());
             /* the 18th index is that for the name of origin cities */
-            Text (uniqueOriginCities = new Text(lines[18]);
-            context.write(uniqueOriginCities, ONE);
+            Text (Origin = new Text(lines[16]);
+            context.write(Origin, ONE);
         } else {
             LOGGER.info("skip csv columns heading!");
         }
